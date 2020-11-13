@@ -1,0 +1,39 @@
+{
+  "description": "An pipeline that extracts information form file, transforms and loads to BQ.",
+  "name": "item master transformer",
+  "parameters": [
+    {
+      "regexes": [
+        "^gs:\\/\\/[^\\n\\r]+$"
+      ],
+      "name": "inputFile",
+      "helpText": "Path of the file pattern glob to read from. ex: gs://liu-fiona/input/data.csv",
+      "label": "Input Cloud Storage file"
+    },
+    {
+      "regexes":[
+        ".+:.+\\..+"
+      ],
+      "name":"outputBQPath",
+      "helpText":"Out put path for Bigquery. ex:liu-fiona:test.data",
+      "label":"Output Bigquery table path"
+
+    },
+    {
+      "regexes": [
+        "^gs:\\/\\/[^\\n\\r]+$"
+      ],
+      "name": "customGcsTempLocation",
+      "helpText": "Path of the GcsTempLocation for using BigQuery. ex: gs://liu-fiona/tmp",
+      "label": "GcsTempLocation path"
+    },
+    {
+      "regexes": [
+        ".+"
+      ],
+      "name": "processingDate",
+      "helpText": "Example: 2020-10-01",
+      "label": "Processing Date"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "description": "行目",
+    "type": "Integer",
+    "name": "row",
+    "mode": "REQUIRED"
+
+  },
+  {
+    "description": "データ",
+    "type": "STRING",
+    "name": "data",
+    "mode": "REQUIRED"
+
+  },
+  {
+    "description": "日付",
+    "type": "DATE",
+    "name": "processing_date",
+    "mode": "REQUIRED"
+  },
+  {
+    "description": "挿入タイムスタンプ",
+    "type": "TIMESTAMP",
+    "name": "insert_timestamp",
+    "mode": "REQUIRED"
+  }
+]
